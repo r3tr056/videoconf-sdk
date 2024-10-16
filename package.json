@@ -1,0 +1,33 @@
+{
+  "name": "videoconf-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./react": "./dist/react/VideoComponentReact.js",
+    "./vue": "./dist/vue/VideoComponentVue.vue",
+    "./angular": "./dist/angular/VideoComponentAngular.ts",
+    "./svelte": "./dist/svelte/VideoComponentSvelte.svelte"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/react": "^18.3.11",
+    "jest": "^29.7.0",
+    "rollup": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1"
+  }
+}

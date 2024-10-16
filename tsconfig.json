@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ES2015",  // or ES6 depending on your target environment
+      "lib": ["ES2015", "DOM"],
+      "module": "ESNext",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "jsx": "react",
+      "declaration": true,
+      "outDir": "./dist",
+      "moduleResolution": "node"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }
+  
