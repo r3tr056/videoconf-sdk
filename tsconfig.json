@@ -1,18 +1,36 @@
 {
-    "compilerOptions": {
-      "target": "ES2015",  // or ES6 depending on your target environment
-      "lib": ["ES2015", "DOM"],
-      "module": "ESNext",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "jsx": "react",
-      "declaration": true,
-      "outDir": "./dist",
-      "moduleResolution": "node"
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
-  }
-  
+  "compilerOptions": {
+    "target": "ES5",                             // Ensures broad compatibility by targeting ES5
+    "lib": ["dom", "dom.iterable", "esnext"],    // Includes necessary libraries for React
+    "allowJs": true,                             // Allow JavaScript files (optional)
+    "skipLibCheck": true,                        // Skip type checking of declaration files for faster compilation
+    "esModuleInterop": true,                     // Ensure compatibility between ES modules and CommonJS
+    "allowSyntheticDefaultImports": true,        // Allow default imports from modules with no default export
+    "strict": true,                              // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,    // Ensure file casing consistency across platforms
+    "module": "ESNext",                          // Use ESNext modules (important for bundlers like Webpack)
+    "moduleResolution": "node",                  // Resolves modules using Node.js-style resolution
+    "isolatedModules": true,                     // Ensure each file is compiled in isolation (useful for future optimizations)
+    "jsx": "react-jsx",                          // Enables JSX in React (React 17+ uses react-jsx)
+    "declaration": true,                         // Emit .d.ts declaration files for type definitions
+    "declarationMap": true,                      // Emit source maps for declaration files
+    "sourceMap": true,                           // Emit source maps for debugging
+    "outDir": "./dist",                          // Output directory for compiled files
+    "noEmit": false,                             // Ensure that TypeScript does not emit files if there are type errors
+    "removeComments": true,                      // Remove comments in the output files
+    "noUnusedLocals": true,                      // Report errors on unused local variables
+    "noUnusedParameters": true,                  // Report errors on unused function parameters
+    "resolveJsonModule": true,                   // Allow importing JSON modules
+    "paths": {                                   // Optional: Define custom module resolution paths
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "src/**/*"                                   // Include all files from src directory
+  ],
+  "exclude": [
+    "node_modules",                              // Exclude node_modules from being compiled
+    "dist",                                      // Exclude the output directory
+    "**/__tests__/**/*"                          // Exclude test files (optional)
+  ]
+}
