@@ -20,6 +20,7 @@ export class VideoConfRTC {
     async createOffer() {
         let sdp: RTCSessionDescriptionInit;
         sdp = await this.peerConnection.createOffer();
+        sdp.sdp?.replace('VP8', 'VP9');
         this.peerConnection.setLocalDescription(sdp);
 
         return sdp;
